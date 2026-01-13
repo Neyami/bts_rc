@@ -31,9 +31,9 @@ const string GUN_DROP2					= "";
 const float GUN_DROP_LIFETIME			= 20.0; //how long the temporary model stays after being dropped
 
 
-const string NPC_MODEL1					= "models/bts_rc/monsters/zombie_barney.mdl";
-const string NPC_MODEL2					= "models/bts_rc/monsters/zombie_blackops.mdl";
-const string GUN_MODEL1					= "models/w_9mmhandgun.mdl";
+const string NPC_MODEL1					= "models/bts_rc/monsters/zombie_barney3.mdl";
+const string NPC_MODEL2					= "models/bts_rc/monsters/zombie_blackops3.mdl";
+const string GUN_MODEL1					= "models/w_beretta.mdl";
 const string GUN_MODEL2					= "models/bts_rc/weapons/w_9mmhandgunsd.mdl";
 
 const int NPC_AE_ATTACK_RIGHT		= 1;
