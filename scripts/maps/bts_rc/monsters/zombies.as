@@ -96,6 +96,14 @@ void ZombieThink()
 
 		HandleZombieEngineer( EHandle(pEntity) );
 	}
+
+	while( (@pEntity = g_EntityFuncs.FindEntityByClassname(pEntity, "monster_zombie_soldier")) !is null )
+	{
+		if( pEntity.pev.model != "models/bts_rc/monsters/zombie_construction_welder.mdl" )
+			continue;
+
+		HandleZombieEngineer( EHandle(pEntity) );
+	}
 }
 
 void HandleZombieEngineer( EHandle hEntity )
@@ -166,6 +174,8 @@ void DoCanisterSmoke( CBaseEntity@ pMonster )
 bool IsZombieEngineer( CBaseEntity@ pMonster )
 {
 	if( pMonster.GetClassname() == "monster_zombie_soldier" and pMonster.pev.model == "models/bts_rc/monsters/zombie_engineer.mdl" )
+		return true;
+	else if( pMonster.GetClassname() == "monster_zombie_soldier" and pMonster.pev.model == "models/bts_rc/monsters/zombie_construction_welder.mdl" )
 		return true;
 	else if( pMonster.GetClassname() == "monster_gonome" and pMonster.pev.model == "models/bts_rc/monsters/zombie_engineer2.mdl" )
 		return true;
