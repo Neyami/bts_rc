@@ -1,0 +1,3 @@
+5
+weapon				640		bts_rc/w_glocksd1		0	180	170	45
+weapon_s			640		bts_rc/w_glocksd4		0	180	170	45
