@@ -1,4 +1,4 @@
-# Black Mesa Training Simulation: Resonance Cascade Repository
+# Black Mesa Training Simulation: Resonance Cascade
 [![](https://scmapdb.wdfiles.com/local--files/map:blackmesa-training-simulation:resonance-cascade/aa_bts_rc.png)](https://scmapdb.wdfiles.com/local--files/map:blackmesa-training-simulation:resonance-cascade/aa_bts_rc.png)
 
 ## Description
