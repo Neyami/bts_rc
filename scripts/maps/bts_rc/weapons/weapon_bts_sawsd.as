@@ -256,6 +256,7 @@ namespace weapon_bts_sawsd
             SetThink( null );
 			roundsBody = self.m_iClip;
 			pev.body = g_ModelFuncs.SetBodygroup(g_ModelFuncs.ModelIndex(self.GetV_Model("models/bts_rc/weapons/v_sawsd.mdl")), pev.body, 2, roundsBody); // HACKY HACK HAACKS
+			pev.body = g_ModelFuncs.SetBodygroup(g_ModelFuncs.ModelIndex("models/bts_rc/weapons/v_sawsd.mdl"), pev.body, 1, g_PlayerClass[m_pPlayer]);
             self.SendWeaponAnim( RELOAD_END, 0, pev.body );
 			g_SoundSystem.EmitSoundDyn( m_pPlayer.edict(), CHAN_ITEM, "bts_rc/weapons/saw_reload2.wav", VOL_NORM, ATTN_NORM, 0, 94 + Math.RandomLong(0, 15) );
         }
