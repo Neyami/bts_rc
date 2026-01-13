@@ -63,7 +63,6 @@
 "!FG_SHOT4"				"fgrunt/pain2.wav"	
 "!FG_SHOT5"				"fgrunt/pain3.wav"
 "!FG_KILL4"				"fgrunt/stayalert.wav"
-"!SC_GOFREEMAN"			"bts_rc/fgrunt/gr_d3tor.wav"
 
 "!RD_YOUREALIVE"		"bts_rc/fgrunt/d0_nightvision.wav"
 "!FG_MASKFREAKS" 		"bts_rc/fgrunt/gr_area1.wav"
@@ -75,7 +74,6 @@
 "!FG_FIREPOWER" 		"bts_rc/fgrunt/suppliesup.wav"
 "!FG_STANDOFF" 			"bts_rc/fgrunt/sentryup.wav"
 "!FG_WIPEDOUT" 			"bts_rc/fgrunt/gr_zombiehint.wav"
-"!FG_IDLE11" 			"bts_rc/fgrunt/securitysystem.wav"
 
 "!BA_SURVEY2A"			"bts_rc/fgrunt/gr_trips.wav"
 "!BA_SURVEY4A"			"bts_rc/fgrunt/gr_breach_main.wav

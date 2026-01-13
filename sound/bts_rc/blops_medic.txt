@@ -37,9 +37,9 @@
 // ───────────────────────────────
 //  MEDIC / OPS LINES
 // ───────────────────────────────
-"!MG_HEAL0" "bts_rc/ops/ops_med_sting.wav"
-"!MG_HEAL1" "bts_rc/ops/ops_med_onepiece.wav"
-"!MG_HEAL2" "bts_rc/ops/ops_med_fwound.wav"
+"!MG_HEAL0" "bts_rc/ops/null.wav"
+"!MG_HEAL1" "bts_rc/ops/null.wav"
+"!MG_HEAL2" "bts_rc/ops/null.wav"
 
 // ───────────────────────────────
 //  FRONT GRUNT (FG) VOICE LINES
@@ -70,8 +70,8 @@
 "!FG_COVER0" "bts_rc/null.wav"
 "!FG_COVER1" "bts_rc/null.wav"
 "!FG_COVER2" "bts_rc/null.wav"
-"!FG_CLEAR0" "bts_rc/ops/ops_clear1.ogg"
-"!FG_CLEAR1" "bts_rc/ops/ops_clear1.ogg"
+"!FG_CLEAR0" "bts_rc/ops/ops_idle1.ogg"
+"!FG_CLEAR1" "bts_rc/ops/ops_idle2.ogg"
 
 "!FG_THROW0" "bts_rc/null.wav"
 "!FG_THROW1" "bts_rc/null.wav"
