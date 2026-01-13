@@ -7,7 +7,7 @@
 namespace monster_zombie_grenadier
 {
 
-const string NPC_MODEL					= "models/bts_rc/monsters/zombie_soldier.mdl";
+const string NPC_MODEL					= "models/bts_rc/monsters/zombie_soldier3.mdl";
 
 const int HITGROUP_GRENADE			= 10;
 const float GRENADE_TIMER				= 6.0;
