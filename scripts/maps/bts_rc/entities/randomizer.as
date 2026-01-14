@@ -425,8 +425,8 @@ namespace randomizer
                 "GM_BULL_S1",
                 "GM_BULL_S2",
                 "GM_BULL_S3",
-				"GM_ZM_ENG_3",
-				"GM_ZM_ENG_4"
+				"GM_ZM_ENG3",
+				"GM_ZM_ENG4"
             };
         }
     }
@@ -516,8 +516,8 @@ namespace randomizer
                 "GM_ZM_CS_2",
                 "GM_ZM_CS_3",
                 "GM_ZM_CS_4",
-				"GM_ZM_ENG_1",
-				"GM_ZM_ENG_2"
+				"GM_ZM_ENG1",
+				"GM_ZM_ENG2"
             };
         }
     }
