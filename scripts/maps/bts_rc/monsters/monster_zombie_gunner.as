@@ -22,7 +22,7 @@ const int NPC_DMG_BOTH_SLASH 		= 40;
 
 const int GUN_TRIGGER						= 80; //pull the gun out when at or below this health percentage, 1-100
 const int GUN_RANDOM_CHANCE		= 40; //randomly pull the gun out when spotting a player, 1-100
-const int GUN_AMMO_MAX1				= 17; //barney
+const int GUN_AMMO_MAX1				= 15; //barney
 const int GUN_AMMO_MAX2				= 17; //blackops
 const float GUN_DAMAGE1					= 9.0; //barney
 const float GUN_DAMAGE2					= 9.0; //blackops
