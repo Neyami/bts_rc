@@ -205,7 +205,7 @@ class ammo_bts_dummy : ScriptBasePlayerAmmoEntity, bts_ammo_base
 class ammo_bts_m16_grenade : ScriptBasePlayerAmmoEntity, bts_ammo_base
 {
     void Spawn() {
-        Spawn("models/hlclassic/w_argrenade.mdl" );
+        Spawn("models/bts_rc/weapons/w_argrenade_solo.mdl" );
     }
     bool AddAmmo( CBaseEntity@ other ) {
         return AddAmmo(other, pev.SpawnFlagBitSet( SF_CREATEDWEAPON ) ? weapon_bts_m16::AMMO_DROP2 : weapon_bts_m16::AMMO_GIVE2, "ARgrenades", weapon_bts_m16::MAX_CARRY2, "bts_rc/weapons/m79_close.wav");
@@ -215,7 +215,7 @@ class ammo_bts_m16_grenade : ScriptBasePlayerAmmoEntity, bts_ammo_base
 class ammo_bts_m16sd_grenade : ScriptBasePlayerAmmoEntity, bts_ammo_base
 {
     void Spawn() {
-        Spawn("models/hlclassic/w_argrenade.mdl" );
+        Spawn("models/bts_rc/weapons/w_argrenade_solo.mdl" );
     }
     bool AddAmmo( CBaseEntity@ other ) {
         return AddAmmo(other, pev.SpawnFlagBitSet( SF_CREATEDWEAPON ) ? weapon_bts_m16sd::AMMO_DROP2 : weapon_bts_m16sd::AMMO_GIVE2, "ARgrenades", weapon_bts_m16sd::MAX_CARRY2, "bts_rc/weapons/m79_close.wav");
@@ -225,7 +225,7 @@ class ammo_bts_m16sd_grenade : ScriptBasePlayerAmmoEntity, bts_ammo_base
 class ammo_bts_m79 : ScriptBasePlayerAmmoEntity, bts_ammo_base
 {
     void Spawn() {
-        Spawn("models/w_argrenade.mdl" );
+        Spawn("models/bts_rc/weapons/w_argrenade_solo.mdl" );
     }
     bool AddAmmo( CBaseEntity@ other ) {
         return AddAmmo(other, pev.SpawnFlagBitSet( SF_CREATEDWEAPON ) ? weapon_bts_m79::AMMO_DROP : weapon_bts_m79::AMMO_GIVE, "ARgrenades", weapon_bts_m79::MAX_CARRY, "bts_rc/weapons/m79_close.wav");
@@ -255,7 +255,7 @@ class ammo_bts_mp5gl : ScriptBasePlayerAmmoEntity, bts_ammo_base
 class ammo_bts_mp5gl_grenade : ScriptBasePlayerAmmoEntity, bts_ammo_base
 {
     void Spawn() {
-        Spawn("models/hlclassic/w_argrenade.mdl" );
+        Spawn("models/bts_rc/weapons/w_argrenade_solo.mdl" );
     }
     bool AddAmmo( CBaseEntity@ other ) {
         return AddAmmo(other, pev.SpawnFlagBitSet( SF_CREATEDWEAPON ) ? weapon_bts_mp5gl::AMMO_DROP2 : weapon_bts_mp5gl::AMMO_GIVE2, "ARgrenades", weapon_bts_mp5gl::MAX_CARRY2, "bts_rc/weapons/m79_close.wav");
