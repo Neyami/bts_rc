@@ -68,7 +68,7 @@ namespace weapon_bts_uzisd
 
         bool Deploy()
         {
-            return bts_deploy( "models/bts_rc/weapons/v_uzisd.mdl", "models/bts_rc/weapons/p_uzisd.mdl", DRAW, "mp5", 2 );
+            return bts_deploy( "models/bts_rc/weapons/v_uzisd.mdl", "models/bts_rc/weapons/p_uzisd.mdl", DRAW, "mp5", 2, 1.1f);
         }
 
         void Holster( int skiplocal = 0 )
