@@ -40,8 +40,7 @@ class ammo_bts_beretta_battery : ScriptBasePlayerAmmoEntity, bts_ammo_base
 class ammo_bts_eagle : ScriptBasePlayerAmmoEntity, bts_ammo_base
 {
     void Spawn() {
-        Spawn("models/hlclassic/w_9mmclip.mdl");
-		pev.scale = 1.2;
+        Spawn("models/bts_rc/weapons/w_357ammobox.mdl");
     }
     bool AddAmmo( CBaseEntity@ other ) {
         return AddAmmo(other, ( "ammo_bts_dreagle" == pev.classname ? Math.RandomLong( 1, 4 ) : weapon_bts_eagle::AMMO_GIVE ), "357", weapon_bts_eagle::MAX_CARRY, "hlclassic/weapons/357_reload1.wav");
@@ -265,7 +264,7 @@ class ammo_bts_mp5gl_grenade : ScriptBasePlayerAmmoEntity, bts_ammo_base
 class ammo_bts_python : ScriptBasePlayerAmmoEntity, bts_ammo_base
 {
     void Spawn() {
-        Spawn(( "ammo_bts_357cyl" == pev.classname ? "models/hlclassic/w_357ammo.mdl" : "models/hlclassic/w_357ammobox.mdl" ) );
+        Spawn(( "ammo_bts_357cyl" == pev.classname ? "models/bts_rc/weapons/w_357ammo.mdl" : "models/hlclassic/w_357ammobox.mdl" ) );
     }
     bool AddAmmo( CBaseEntity@ other ) {
         return AddAmmo(other, ( "ammo_bts_357cyl" == pev.classname ? Math.RandomLong( 2, 4 ) : weapon_bts_python::AMMO_GIVE ), "357", weapon_bts_python::MAX_CARRY, "hlclassic/weapons/357_reload1.wav");
