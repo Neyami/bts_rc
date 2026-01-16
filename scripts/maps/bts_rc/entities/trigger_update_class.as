@@ -718,6 +718,8 @@ namespace trigger_update_class
                             AddItems( player, {
                                 { "ammo_762", 2 },
 								{ "ammo_crossbow", 1 },
+								{ "ammo_bts_flamethrower", 1 },
+								{ "ammo_bts_m16_grenade", 1 },
 								{ "ammo_bts_battery", 3 },
 								{ "item_bts_helmet", 3 },
 								{ "ammo_bts_m16", 1 },
