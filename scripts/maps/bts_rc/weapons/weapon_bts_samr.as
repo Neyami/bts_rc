@@ -190,7 +190,7 @@ namespace weapon_bts_samr
             }
             if( m_iFireMode == FULL_AUTO )
             {
-                m_pPlayer.pev.punchangle.x = -1.0f;
+                m_pPlayer.pev.punchangle.x = -1.55f;
             }
             else
             {
