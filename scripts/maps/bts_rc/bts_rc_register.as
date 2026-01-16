@@ -1463,6 +1463,7 @@ namespace precache
 			"models/bts_rc/weapons/w_glock17f.mdl",
 			"models/bts_rc/weapons/w_glock18.mdl",
 			"models/hlclassic/w_argrenade.mdl",
+			"models/bts_rc/weapons/w_argrenade_solo.mdl",
 			"models/bts_rc/weapons/w_battery.mdl",
 			"models/bts_rc/weapons/w_crowbar.mdl",
 			"models/bts_rc/weapons/w_crowbary.mdl",
