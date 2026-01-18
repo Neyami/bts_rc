@@ -4,32 +4,6 @@ namespace randomizer
     CLogger@ m_Logger = CLogger( "Randomizer" );
 #endif
 
-    // Swap a specific squad to a random location.
-    void randomize_squad( CBaseMonster@ squad, CBaseEntity@ entity )
-    {
-        if( squad !is null && g_EntityFuncs.IsValidEntity( squad.pev.owner ) )
-        {
-            CBaseEntity@ owner_spot = g_EntityFuncs.Instance( squad.pev.owner );
-
-            if( owner_spot !is null )
-            {
-                owner_spot.Use( null, null, USE_TOGGLE ); // Do not change USE_TYPE input.
-            }
-#if DEVELOP
-            else
-            {
-                randomizer::m_Logger.warn( "Failed to swap a squad. null owner for squad" );
-            }
-#endif
-        }
-#if DEVELOP
-        else
-        {
-            randomizer::m_Logger.warn( "Failed to swap a squad: {}", { ( squad is null ? "null squad" : "null owner for squad" ) } );
-        }
-#endif
-    }
-
     // Swap all squads to a random and unique location.
     void randomize( CBaseEntity@ pActivator, CBaseEntity@ pCaller, USE_TYPE useType, float flValue )
     {
