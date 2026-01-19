@@ -218,7 +218,7 @@ namespace weapon_bts_sledgehammer
 				// AdamR: End
 
 				g_WeaponFuncs.ClearMultiDamage();
-				pOther.TraceAttack(pev.owner.vars, flDamage * 0.80f, g_Engine.v_forward, tr, DMG_LAUNCH | DMG_BLAST);
+				pOther.TraceAttack(pev.owner.vars, flDamage * 0.80f, g_Engine.v_forward, tr, DMG_LAUNCH | DMG_BLAST | | DMG_CLUB);
 				g_WeaponFuncs.ApplyMultiDamage(pev, pev.owner.vars);
 			  }
 
@@ -414,9 +414,9 @@ namespace weapon_bts_sledgehammer
 				g_WeaponFuncs.ClearMultiDamage();
 
 				if (self.m_flNextPrimaryAttack + 1.0f < g_Engine.time)
-					pEntity.TraceAttack(m_pPlayer.pev, DAMAGE, g_Engine.v_forward, tr, DMG_LAUNCH );		 // first swing does full damage
+					pEntity.TraceAttack(m_pPlayer.pev, DAMAGE, g_Engine.v_forward, tr, DMG_LAUNCH | DMG_CLUB);		 // first swing does full damage
 				else
-					pEntity.TraceAttack(m_pPlayer.pev, DAMAGE, g_Engine.v_forward, tr, DMG_LAUNCH ); // subsequent swings do 50% (Changed -Sniper) (Half)
+					pEntity.TraceAttack(m_pPlayer.pev, DAMAGE, g_Engine.v_forward, tr, DMG_LAUNCH | DMG_CLUB); // subsequent swings do 50% (Changed -Sniper) (Half)
 
 				g_WeaponFuncs.ApplyMultiDamage(m_pPlayer.pev, m_pPlayer.pev);
 
@@ -555,9 +555,9 @@ namespace weapon_bts_sledgehammer
 				g_WeaponFuncs.ClearMultiDamage();
 
 				if (self.m_flNextPrimaryAttack + 1.0f < g_Engine.time)
-					pEntity.TraceAttack(m_pPlayer.pev, flDamage, g_Engine.v_forward, tr, DMG_LAUNCH | DMG_BLAST);		   // first swing does full damage
+					pEntity.TraceAttack(m_pPlayer.pev, flDamage, g_Engine.v_forward, tr, DMG_LAUNCH | DMG_BLAST | DMG_CLUB);		   // first swing does full damage
 				else
-					pEntity.TraceAttack(m_pPlayer.pev, flDamage, g_Engine.v_forward, tr, DMG_LAUNCH | DMG_BLAST); // subsequent swings do 50% (Changed -Sniper) (Half)
+					pEntity.TraceAttack(m_pPlayer.pev, flDamage, g_Engine.v_forward, tr, DMG_LAUNCH | DMG_BLAST | DMG_CLUB); // subsequent swings do 50% (Changed -Sniper) (Half)
 
 				g_WeaponFuncs.ApplyMultiDamage(m_pPlayer.pev, m_pPlayer.pev);
 
