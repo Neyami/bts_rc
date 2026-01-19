@@ -218,7 +218,7 @@ namespace weapon_bts_sledgehammer
 				// AdamR: End
 
 				g_WeaponFuncs.ClearMultiDamage();
-				pOther.TraceAttack(pev.owner.vars, flDamage * 0.80f, g_Engine.v_forward, tr, DMG_LAUNCH | DMG_BLAST | | DMG_CLUB);
+				pOther.TraceAttack(pev.owner.vars, flDamage * 0.80f, g_Engine.v_forward, tr, DMG_LAUNCH | DMG_BLAST | DMG_CLUB);
 				g_WeaponFuncs.ApplyMultiDamage(pev, pev.owner.vars);
 			  }
 
