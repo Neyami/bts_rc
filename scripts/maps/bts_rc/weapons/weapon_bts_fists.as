@@ -440,10 +440,10 @@ namespace weapon_bts_fists
 
 				if (PlayerClass == PM::HELMET)
 				{
-					pEntity.TraceAttack( m_pPlayer.pev, DAMAGE * 3.5, g_Engine.v_forward, tr, DMG_LAUNCH );
+					pEntity.TraceAttack( m_pPlayer.pev, DAMAGE * 3.5, g_Engine.v_forward, tr, DMG_LAUNCH | DMG_CLUB);
 				}
 				else
-					pEntity.TraceAttack( m_pPlayer.pev, DAMAGE, g_Engine.v_forward, tr, DMG_LAUNCH );
+					pEntity.TraceAttack( m_pPlayer.pev, DAMAGE, g_Engine.v_forward, tr, DMG_LAUNCH | DMG_CLUB);
 
                 g_WeaponFuncs.ApplyMultiDamage( m_pPlayer.pev, m_pPlayer.pev );
 
