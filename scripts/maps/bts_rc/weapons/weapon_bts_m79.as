@@ -39,7 +39,7 @@ namespace weapon_bts_m79
     int SLOT = 5;
     int POSITION = 4;
     // Vars
-    float DAMAGE = 125.0f;
+    float DAMAGE = 138.0f;
     float RADIUS = 240.0f;
     float VELOCITY = 1200.0f;
     Vector OFFSET( 8.0f, 4.0f, -2.0f ); // for projectile
