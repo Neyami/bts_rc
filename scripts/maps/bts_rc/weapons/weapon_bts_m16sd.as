@@ -35,7 +35,7 @@ namespace weapon_bts_m16sd
 	int POSITION = 11;
 	// Vars
 	int DAMAGE = 19;
-	float DAMAGE2 = 100.0f;
+	float DAMAGE2 = 130.0f;
 	Vector CROUCH_CONE(0.01f, 0.01f, 0.01f);
 	Vector SHELL(32.0f, 6.0f, -12.0f);
 
