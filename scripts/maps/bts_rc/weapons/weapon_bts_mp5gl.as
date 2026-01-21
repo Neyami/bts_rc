@@ -41,7 +41,7 @@ namespace weapon_bts_mp5gl
     int POSITION = 5;
     // Vars
     int DAMAGE = 13;
-    float DAMAGE2 = 100.0f;
+    float DAMAGE2 = 130.0f;
     Vector SHELL( 32.0f, 6.0f, -12.0f );
 
     class weapon_bts_mp5gl : ScriptBasePlayerWeaponEntity, bts_rc_base_weapon
