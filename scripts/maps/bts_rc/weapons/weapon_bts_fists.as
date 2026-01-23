@@ -422,16 +422,21 @@ namespace weapon_bts_fists
                 g_WeaponFuncs.ClearMultiDamage();
 				
 				// aone
+				if( pEntity !is null && ( pEntity.IsPlayer() ) ) //additional force for players
+				{
+					pEntity.pev.velocity = pEntity.pev.velocity +
+						( self.pev.origin - pEntity.pev.origin ).Normalize() * -250;
+				}
 				if (PlayerClass == PM::HELMET)
 				{
-					if( pEntity !is null && ( pEntity.IsPlayer() || pEntity.IsMonster() ) )
+					if( pEntity !is null && ( pEntity.IsMonster() ) )
 					{
 						pEntity.pev.velocity = pEntity.pev.velocity +
-							( self.pev.origin - pEntity.pev.origin ).Normalize() * -220;
+							( self.pev.origin - pEntity.pev.origin ).Normalize() * -250;
 					}
 				}
 				else
-					if( pEntity !is null && ( pEntity.IsPlayer() || pEntity.IsMonster() ) )
+					if( pEntity !is null && ( pEntity.IsMonster() ) )
 					{
 						pEntity.pev.velocity = pEntity.pev.velocity +
 							( self.pev.origin - pEntity.pev.origin ).Normalize() * -180;
