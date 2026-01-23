@@ -29,9 +29,9 @@ namespace weapon_bts_eagle
     int MAX_CLIP2 = WEAPON_NOCLIP;
     // int DEFAULT_GIVE = Math.RandomLong( 1, 9 );
     // int DEFAULT_GIVE2 = Math.RandomLong( 1, 2 );
-    int AMMO_GIVE = 3;
+    int AMMO_GIVE = MAX_CLIP;
     int AMMO_GIVE2 = 1;
-    int AMMO_DROP = 3;
+    int AMMO_DROP = AMMO_GIVE;
     int AMMO_DROP2 = AMMO_GIVE2;
     int WEIGHT = 10;
     // Weapon HUD

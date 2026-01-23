@@ -161,7 +161,7 @@ void CSentryCallback( CCVar@ cvar, const string& in szOldValue, float flOldValue
         }
         else if( g_sentry_laser.scheduler is null )
         {
-            @g_sentry_laser.scheduler = g_Scheduler.SetInterval( g_sentry_laser, "think", 0.1f, g_Scheduler.REPEAT_INFINITE_TIMES );
+            @g_sentry_laser.scheduler = g_Scheduler.SetInterval( g_sentry_laser, "think", 0.3f, g_Scheduler.REPEAT_INFINITE_TIMES );
         }
     }
 }

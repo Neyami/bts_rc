@@ -19,7 +19,6 @@
 #endif
 
 
-#include "gamemodes/lasers"
 #include "gamemodes/player_voices"
 
 #include "Hooks/monster_killed"
@@ -412,38 +411,11 @@ namespace Hellbound
 CCVar @cvar_player_models = CCVar("bts_rc_disable_player_models", 0, String::EMPTY_STRING, ConCommandFlag::AdminOnly);
 CCVar @cvar_player_voices = CCVar("bts_rc_disable_player_voices", 0, String::EMPTY_STRING, ConCommandFlag::AdminOnly);
 CCVar @cvar_bloodpuddles = CCVar("bts_rc_disable_bloodpuddles", 0, String::EMPTY_STRING, ConCommandFlag::AdminOnly);
-CCVar @cvar_sentry_laser = CCVar("bts_rc_disable_sentry_laser", -1, String::EMPTY_STRING, ConCommandFlag::AdminOnly, @CSentryCallback);
 CCVar @cvar_trace_blood = CCVar("bts_rc_disable_bloodsplash", 0, String::EMPTY_STRING, ConCommandFlag::AdminOnly);
 CCVar @cvar_trace_sparks = CCVar("bts_rc_disable_sparks", 0, String::EMPTY_STRING, ConCommandFlag::AdminOnly);
 /*==========================================================================
 *   - End
 ==========================================================================*/
-
-void MapActivate()
-{
-	/*==========================================================================
-	*   - Start of turret lasers
-	==========================================================================*/
-	const array<string> turrets = {
-#if SERVER
-		"monster_sentry",
-#endif
-		"monster_turret",
-		"monster_miniturret"};
-
-	for (uint ui = 0; ui < turrets.length(); ui++)
-	{
-		CBaseEntity @entity = null;
-
-		while ((@entity = g_EntityFuncs.FindEntityByClassname(entity, turrets[ui])) !is null)
-		{
-			g_sentry_laser.handles.insertLast(EHandle(entity));
-		}
-	}
-	/*==========================================================================
-	*   - End
-	==========================================================================*/
-}
 
 void MapInit()
 {

@@ -209,7 +209,7 @@ namespace trigger_update_class
                                 { "item_bts_helmet", 1 },
                                 { "item_bts_armorvest", 1 },
                                 { "ammo_buckshot", 1 },
-                                { "ammo_bts_eagle", 3 },
+                                { "ammo_bts_eagle", 1 },
                                 { "ammo_mp5clip", 1 }
                             } );
                             AddKeyCard( player, {
@@ -294,7 +294,7 @@ namespace trigger_update_class
                         {
                             AddItems( player, {
                                 { "weapon_bts_python", 1 },
-                                { "ammo_bts_eagle", 4 },
+                                { "ammo_bts_eagle", 2 },
 								{ "item_bts_helmet", 1 }
                             } );
                             AddKeyCard( player, {
@@ -355,7 +355,7 @@ namespace trigger_update_class
                                 { "ammo_mp5clip", 1 },
                                 { "ammo_bts_battery", 1 },
                                 { "ammo_buckshot", 1 },
-                                { "ammo_bts_python", 4 },
+                                { "ammo_bts_python", 2 },
                                 { "weapon_bts_flare", 1 }
                             } );
                             g_PlayerFuncs.HudMessage( player, msgParams, "RANDOM USER MODE SELECTED\nGEAR NAME: HOARDER" );
@@ -539,7 +539,7 @@ namespace trigger_update_class
                                 { "item_bts_helmet", 2 },
                                 { "weapon_bts_eagle", 1 },
                                 { "weapon_bts_python", 1 },
-                                { "ammo_bts_python", Math.RandomLong( 1, 4 ) }
+                                { "ammo_bts_python", Math.RandomLong( 1, 2 ) }
                             } );
                             g_PlayerFuncs.HudMessage( player, msgParams, "RANDOM USER MODE SELECTED\nGEAR NAME: TOUGH CHOICE" );
 							g_PlayerFuncs.SayTextAll(player, playerName + " rolled 23rd Loadout: TOUGH CHOICE.\n");
@@ -602,7 +602,7 @@ namespace trigger_update_class
                             AddItems( player, {
                                 { "item_bts_helmet", 1 },
                                 { "ammo_bts_shotshell", 2 },
-                                { "ammo_bts_python", 6 },
+                                { "ammo_bts_python", 3 },
                                 { "weapon_bts_flashlight", 1 }
                             } );
                             g_PlayerFuncs.HudMessage( player, msgParams, "RANDOM USER MODE SELECTED\nGEAR NAME: AND YET NO DAMN GUN" );
@@ -616,7 +616,7 @@ namespace trigger_update_class
                                 { "item_bts_helmet", 2 },
                                 { "weapon_bts_glock17f", 1 },
                                 { "weapon_bts_eagle", 1 },
-                                { "ammo_bts_eagle", 3 },
+                                { "ammo_bts_eagle", 1 },
                                 { "ammo_9mmclip", 1 },
                                 { "weapon_bts_flashlight", 1 }
                             } );
@@ -962,8 +962,8 @@ namespace trigger_update_class
 								{ "weapon_bts_shotgun", Math.RandomLong( -20, 1 ) },
 								{ "weapon_bts_sniperrifle", Math.RandomLong( -100, 1 ) },
 								{ "weapon_bts_mp5", Math.RandomLong( -17, 1 ) },
-								{ "ammo_bts_eagle", Math.RandomLong( -10, 6 ) },
-								{ "ammo_bts_python", Math.RandomLong( -3, 4 ) },
+								{ "ammo_bts_eagle", Math.RandomLong( -10, 2 ) },
+								{ "ammo_bts_python", Math.RandomLong( -3, 1 ) },
 								{ "ammo_bts_shotshell", Math.RandomLong( -7, 6 ) },
 								{ "ammo_bts_m16", Math.RandomLong( -10, 4 ) },
 								{ "ammo_bts_flarebox", Math.RandomLong( -4, 5 ) },
@@ -1245,8 +1245,8 @@ namespace trigger_update_class
 								{ "weapon_bts_sbshotgun", Math.RandomLong( -20, 1 ) },
 								{ "weapon_bts_samr", Math.RandomLong( -100, 1 ) },
 								{ "weapon_bts_mp5gl", Math.RandomLong( -17, 1 ) },
-								{ "ammo_bts_eagle", Math.RandomLong( -3, 6 ) },
-								{ "ammo_bts_python", Math.RandomLong( -3, 3 ) },
+								{ "ammo_bts_eagle", Math.RandomLong( -3, 2 ) },
+								{ "ammo_bts_python", Math.RandomLong( -3, 1 ) },
 								{ "ammo_bts_shotshell", Math.RandomLong( -4, 6 ) },
 								{ "ammo_bts_m16", Math.RandomLong( -7, 4 ) },
 								{ "ammo_bts_flarebox", Math.RandomLong( -4, 5 ) },
@@ -1349,9 +1349,6 @@ namespace trigger_update_class
                     {
                         case 1:
                             barney_ammo_type = "ammo_bts_eagle";
-							AddItems( player, {
-								{ barney_ammo_type, 4 }
-							} );
                             barney_wpn_type = "weapon_bts_eagle";
 							g_PlayerFuncs.SayTextAll(player, playerName + " enrolled as a Security Guard with a Desert Eagle.\n");
 							switch( Math.RandomLong( 1, 4 ) )
@@ -1546,7 +1543,7 @@ namespace trigger_update_class
 								{ "weapon_bts_sledgehammer", 1 },
                                 { "weapon_bts_flaregun", 1 },
                                 { "ammo_bts_flarebox", 6 },
-								{ "ammo_bts_eagle", 6 }
+								{ "ammo_bts_eagle", 2 }
                             } );
 							AddItemInventory( player, {
                                 { "model", "models/w_antidote.mdl" },
