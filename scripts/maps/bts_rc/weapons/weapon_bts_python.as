@@ -33,8 +33,8 @@ namespace weapon_bts_python
     int MAX_CARRY = 18;
     int MAX_CLIP = 6;
     // int DEFAULT_GIVE = Math.RandomLong( 3, 6 );
-    int AMMO_GIVE = MAX_CLIP;
-    int AMMO_DROP = AMMO_GIVE;
+    int AMMO_GIVE = 3;
+    int AMMO_DROP = 3;
     int WEIGHT = 10;
     // Weapon HUD
     int SLOT = 1;
