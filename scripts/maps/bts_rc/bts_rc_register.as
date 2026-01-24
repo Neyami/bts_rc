@@ -713,9 +713,13 @@ void MapInit()
 	bscientist.takedamage.push_back("scientist/sci_pain8.wav");
 	bscientist.takedamage.push_back("scientist/sci_pain9.wav");
 	bscientist.takedamage.push_back("scientist/sci_pain10.wav");
+	bscientist.takedamage.push_back("scientist/sci_fear11.wav");
+	bscientist.takedamage.push_back("scientist/sci_fear15.wav");
 	bscientist.killed.push_back("scientist/sci_die1.wav");
 	bscientist.killed.push_back("scientist/sci_die2.wav");
 	bscientist.killed.push_back("scientist/sci_die3.wav");
+	bscientist.killed.push_back("scientist/scream21.wav");
+	bscientist.killed.push_back("scientist/scream23.wav");
 
 	// Scientist
 	scientist.takedamage.cooldown = 1.0;
@@ -729,9 +733,13 @@ void MapInit()
 	scientist.takedamage.push_back("scientist/sci_pain8.wav");
 	scientist.takedamage.push_back("scientist/sci_pain9.wav");
 	scientist.takedamage.push_back("scientist/sci_pain10.wav");
+	scientist.takedamage.push_back("scientist/sci_fear11.wav");
+	scientist.takedamage.push_back("scientist/sci_fear15.wav");
 	scientist.killed.push_back("scientist/sci_die1.wav");
 	scientist.killed.push_back("scientist/sci_die2.wav");
 	scientist.killed.push_back("scientist/sci_die3.wav");
+	scientist.killed.push_back("scientist/scream21.wav");
+	scientist.killed.push_back("scientist/scream23.wav");
 	/*==========================================================================
 	*   - End
 	==========================================================================*/
