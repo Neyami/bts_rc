@@ -310,37 +310,40 @@ class monster_zombie_gunner : bts_rc_base_monster
 
 			case NPC_AE_ATTACK_GUN:
 			{
-				int iPitchShift = Math.RandomLong( 0, 20 );
-
-				// Only shift about half the time
-				if( iPitchShift > 10 )
-					iPitchShift = 0;
-				else
-					iPitchShift -= 5;
-
-				if( m_iAmmo > 0 )
+				if( m_bHasGun )
 				{
-					Vector vecShootOrigin, vecShootDir;
-					self.GetAttachment( 0, vecShootOrigin, void );
+					int iPitchShift = Math.RandomLong( 0, 20 );
 
-					Math.MakeVectors( pev.angles );
+					// Only shift about half the time
+					if( iPitchShift > 10 )
+						iPitchShift = 0;
+					else
+						iPitchShift -= 5;
 
-					vecShootDir = g_Engine.v_forward;
+					if( m_iAmmo > 0 )
+					{
+						Vector vecShootOrigin, vecShootDir;
+						self.GetAttachment( 0, vecShootOrigin, void );
 
-					Vector vecShellVelocity = g_Engine.v_right * Math.RandomFloat(40, 90) + g_Engine.v_up * Math.RandomFloat(75, 200) + g_Engine.v_forward * Math.RandomFloat(-40, 40);
-					g_EntityFuncs.EjectBrass( vecShootOrigin + vecShootDir * 24 + g_Engine.v_right * 8, vecShellVelocity, pev.angles.y, m_iShell, TE_BOUNCE_SHELL );
-					self.FireBullets( 1, vecShootOrigin, vecShootDir, VECTOR_CONE_2DEGREES, 1024.0, BULLET_PLAYER_CUSTOMDAMAGE, 0, IsBarney() ? GUN_DAMAGE1 : GUN_DAMAGE2, self.pev );
+						Math.MakeVectors( pev.angles );
 
-					pev.effects |= EF_MUZZLEFLASH;
+						vecShootDir = g_Engine.v_forward;
 
-					m_iAmmo--;
+						Vector vecShellVelocity = g_Engine.v_right * Math.RandomFloat(40, 90) + g_Engine.v_up * Math.RandomFloat(75, 200) + g_Engine.v_forward * Math.RandomFloat(-40, 40);
+						g_EntityFuncs.EjectBrass( vecShootOrigin + vecShootDir * 24 + g_Engine.v_right * 8, vecShellVelocity, pev.angles.y, m_iShell, TE_BOUNCE_SHELL );
+						self.FireBullets( 1, vecShootOrigin, vecShootDir, VECTOR_CONE_2DEGREES, 1024.0, BULLET_PLAYER_CUSTOMDAMAGE, 0, IsBarney() ? GUN_DAMAGE1 : GUN_DAMAGE2, self.pev );
 
-					int iSound = IsBarney() ? SND_SHOOT_BARNEY : SND_SHOOT_BLACKOPS;
-					g_SoundSystem.EmitSoundDyn( self.edict(), CHAN_WEAPON, arrsSounds[iSound], VOL_NORM, ATTN_NORM, 0, 100 + iPitchShift );
-					GetSoundEntInstance().InsertSound( bits_SOUND_COMBAT, pev.origin, 384, 0.3, self );
+						pev.effects |= EF_MUZZLEFLASH;
+
+						m_iAmmo--;
+
+						int iSound = IsBarney() ? SND_SHOOT_BARNEY : SND_SHOOT_BLACKOPS;
+						g_SoundSystem.EmitSoundDyn( self.edict(), CHAN_WEAPON, arrsSounds[iSound], VOL_NORM, ATTN_NORM, 0, 100 + iPitchShift );
+						GetSoundEntInstance().InsertSound( bits_SOUND_COMBAT, pev.origin, 384, 0.3, self );
+					}
+					else
+						g_SoundSystem.EmitSoundDyn( self.edict(), CHAN_WEAPON, arrsSounds[SND_EMPTY], 0.8, ATTN_NORM, 0, 100 + iPitchShift );
 				}
-				else
-					g_SoundSystem.EmitSoundDyn( self.edict(), CHAN_WEAPON, arrsSounds[SND_EMPTY], 0.8, ATTN_NORM, 0, 100 + iPitchShift );
 
 				break;
 			}
@@ -384,7 +387,7 @@ class monster_zombie_gunner : bts_rc_base_monster
 		{
 			case TASK_RUN_PATH:
 			{
-				if( m_bGunOut )
+				if( m_bHasGun and m_bGunOut )
 					self.m_movementActivity = ACT_RUN;
 				else
 					self.m_movementActivity = ACT_WALK;
