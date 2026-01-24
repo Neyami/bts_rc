@@ -65,6 +65,7 @@
 "models/roach.mdl" 				"models/hlclassic/roach.mdl"
 "models/houndeye.mdl"			"models/bts_rc/monsters/houndeye.mdl"
 "models/controller.mdl"			"models/bts_rc/monsters/controller.mdl"
+"models/voltigore.mdl"			"models/bts_rc/monsters/voltigore.mdl"
 
 //Ammo
 "models/w_9mmclip.mdl"			"models/hlclassic/w_9mmclip.mdl"
