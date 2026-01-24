@@ -11,7 +11,9 @@ namespace monster_snapbug
 const float NPC_HEALTH			= 20.0;
 const float DAMAGE_BITE		= 15.0;
 const float DAMAGE_POISON	= 1.0; //deal this damage every DAMAGE_TIME seconds
-const float DAMAGE_TIME		= 2.0;
+const float DAMAGE_TIME_NORMAL = 2.0;   // 
+const float DAMAGE_TIME_FAST   = 1.0;   // 100 seconds passed, this is the threshold that wouldve killed them already
+const float DAMAGE_TIME_FASTER = 0.4;   // 240 seconds (4 minutes) passed, snapbug really getting hungry there
 const float DAMAGE_TYPE		= DMG_POISON; //only using this to cause the poison hud indicator to show up, the player doesn't actually get poisoned
 
 const array<string> arrsLargerBody = 
@@ -424,6 +426,7 @@ void InitSnapbugSchedules()
 class snapbug : ScriptBaseEntity
 {
 	private float m_flDealDamage;
+	private float m_flAttachTime;
 
 	protected CBasePlayer@ m_pOwner
 	{
@@ -438,7 +441,8 @@ class snapbug : ScriptBaseEntity
 		g_EntityFuncs.SetSize( self.pev, g_vecZero, g_vecZero );
 
 		pev.scale = 0.3;
-		m_flDealDamage = g_Engine.time + DAMAGE_TIME;
+		m_flAttachTime = g_Engine.time;
+		m_flDealDamage = g_Engine.time + DAMAGE_TIME_NORMAL;
 
 		SetThink( ThinkFunction(this.AttachedThink) );
 		pev.nextthink = g_Engine.time;
@@ -494,7 +498,17 @@ class snapbug : ScriptBaseEntity
 			if( m_pOwner.pev.health <= 0 )
 				m_pOwner.Killed( self.pev, GIB_NEVER );
 
-			m_flDealDamage = g_Engine.time + DAMAGE_TIME;
+			float flElapsed = g_Engine.time - m_flAttachTime;
+			float flNextBite;
+
+			if( flElapsed >= 240.0 )
+				flNextBite = DAMAGE_TIME_FASTER;
+			else if( flElapsed >= 100.0 )
+				flNextBite = DAMAGE_TIME_FAST;
+			else
+				flNextBite = DAMAGE_TIME_NORMAL;
+
+			m_flDealDamage = g_Engine.time + flNextBite;
 		}
 
 		pev.nextthink = g_Engine.time + 0.1;
